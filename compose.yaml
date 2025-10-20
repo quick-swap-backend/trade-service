@@ -1,10 +1,21 @@
 services:
-  mariadb:
+  tradeservice-mariadb:
     image: 'mariadb:latest'
+    container_name: tradeservice-mariadb
     environment:
-      - 'MARIADB_DATABASE=productservice'
+      - 'MARIADB_DATABASE=tradeservice'
       - 'MARIADB_PASSWORD=test@1234'
       - 'MARIADB_ROOT_PASSWORD=test@1234'
       - 'MARIADB_USER=haisia'
     ports:
-      - '3309:3306'
+      - '8201:3306'
+    networks:
+      - quickswap-network
+    command:
+      - --log-bin=mysql-bin
+      - --binlog-format=ROW
+      - --server-id=3
+
+networks:
+  quickswap-network:
+    external: true

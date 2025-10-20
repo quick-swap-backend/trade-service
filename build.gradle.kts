@@ -26,7 +26,7 @@ dependencies {
   implementation("org.springframework.boot:spring-boot-starter-data-jpa")
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.springframework.boot:spring-boot-starter-security")
-
+  implementation("org.springframework.kafka:spring-kafka")
   runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
   developmentOnly("org.springframework.boot:spring-boot-docker-compose")
 
@@ -37,7 +37,7 @@ dependencies {
   testImplementation("com.h2database:h2")
   testImplementation("io.mockk:mockk:1.14.6")
 
-  implementation("com.github.quick-swap-backend:commons:v0.0.4")
+  implementation("com.github.quick-swap-backend:commons:v0.0.15")
 }
 
 kotlin {
