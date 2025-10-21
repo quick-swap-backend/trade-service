@@ -39,7 +39,7 @@ class ProductCreatedEventListener(
 data class ProductCreatedEvent(
   val id: String,
   val title: String,
-  val price: Int,
+  val price: Long,
   val category: String,
   val sellerId: String,
   val sellerEmail: String
