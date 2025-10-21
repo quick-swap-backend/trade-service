@@ -1,4 +1,4 @@
-server.port: 8002
+server.port: 8200
 
 spring:
   application:
@@ -20,3 +20,6 @@ spring:
         use_sql_comments: true
 jwt:
   secret: thisisjwttokensecretkeythisisjwttokensecretkeythisisjwttokensecretkeythisisjwttokensecretkey
+
+kafka:
+  bootstrap-servers: localhost:9092
